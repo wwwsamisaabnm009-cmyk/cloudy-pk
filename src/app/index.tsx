@@ -1,98 +1,36 @@
-import * as Device from 'expo-device';
-import { Platform, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-
-import { AnimatedIcon } from '@/components/animated-icon';
-import { HintRow } from '@/components/hint-row';
-import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { WebBadge } from '@/components/web-badge';
-import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
-
-function getDevMenuHint() {
-  if (Platform.OS === 'web') {
-    return <ThemedText type="small">use browser devtools</ThemedText>;
-  }
-  if (Device.isDevice) {
-    return (
-      <ThemedText type="small">
-        shake device or press <ThemedText type="code">m</ThemedText> in terminal
-      </ThemedText>
-    );
-  }
-  const shortcut = Platform.OS === 'android' ? 'cmd+m (or ctrl+m)' : 'cmd+d';
-  return (
-    <ThemedText type="small">
-      press <ThemedText type="code">{shortcut}</ThemedText>
-    </ThemedText>
-  );
-}
+import { ThemedText } from '@/components/themed-text';
+import { StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { Link } from 'expo-router';
 
 export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <ThemedView style={styles.heroSection}>
-          <AnimatedIcon />
-          <ThemedText type="title" style={styles.title}>
-            Welcome to&nbsp;Expo
-          </ThemedText>
-        </ThemedView>
+      <Image source={require('@/assets/images/icon.png')} style={styles.logo} />
+      <ThemedText type="title">My Restaurant 🍽️</ThemedText>
+      <ThemedText type="subtitle" style={styles.sub}>Best Food in Lahore</ThemedText>
+      
+      <ThemedView style={styles.card}>
+        <ThemedText type="defaultSemiBold">🍛 Chicken Biryani - Rs. 450</ThemedText>
+      </ThemedView>
+      <ThemedView style={styles.card}>
+        <ThemedText type="defaultSemiBold">🍔 Zinger Burger - Rs. 350</ThemedText>
+      </ThemedView>
 
-        <ThemedText type="code" style={styles.code}>
-          get started
-        </ThemedText>
-
-        <ThemedView type="backgroundElement" style={styles.stepContainer}>
-          <HintRow
-            title="Try editing"
-            hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
-          />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
-          <HintRow
-            title="Fresh start"
-            hint={<ThemedText type="code">npm run reset-project</ThemedText>}
-          />
-        </ThemedView>
-
-        {Platform.OS === 'web' && <WebBadge />}
-      </SafeAreaView>
+      <Link href="/menu" asChild>
+        <TouchableOpacity style={styles.btn}>
+          <ThemedText style={styles.btnText}>View Full Menu</ThemedText>
+        </TouchableOpacity>
+      </Link>
     </ThemedView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    flexDirection: 'row',
-  },
-  safeArea: {
-    flex: 1,
-    paddingHorizontal: Spacing.four,
-    alignItems: 'center',
-    gap: Spacing.three,
-    paddingBottom: BottomTabInset + Spacing.three,
-    maxWidth: MaxContentWidth,
-  },
-  heroSection: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flex: 1,
-    paddingHorizontal: Spacing.four,
-    gap: Spacing.four,
-  },
-  title: {
-    textAlign: 'center',
-  },
-  code: {
-    textTransform: 'uppercase',
-  },
-  stepContainer: {
-    gap: Spacing.three,
-    alignSelf: 'stretch',
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.four,
-    borderRadius: Spacing.four,
-  },
-});
+  container:{flex:1, alignItems:'center', justifyContent:'center', padding:20, gap:10},
+  logo:{width:100, height:100, borderRadius:20},
+  sub:{opacity:0.7},
+  card:{width:'100%', padding:15, borderRadius:12, backgroundColor:'#eee'},
+  btn:{backgroundColor:'#ff6347', paddingVertical:12, paddingHorizontal:30, borderRadius:10, marginTop:20},
+  btnText:{color:'#fff', fontWeight:'bold'}
+})
