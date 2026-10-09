@@ -1,20 +1,22 @@
-import { ThemedView } from '@/components/themed-view';
+
 import { ThemedText } from '@/components/themed-text';
-import { StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { ThemedView } from '@/components/themed-view';
 import { Link } from 'expo-router';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
-      <Image source={require('@/assets/images/icon.png')} style={styles.logo} />
+      
       <ThemedText type="title">My Restaurant 🍽️</ThemedText>
       <ThemedText type="subtitle" style={styles.sub}>Best Food in Lahore</ThemedText>
-      
+
       <ThemedView style={styles.card}>
-        <ThemedText type="defaultSemiBold">🍛 Chicken Biryani - Rs. 450</ThemedText>
+        <ThemedText>🍛 Chicken Biryani - Rs. 450</ThemedText>
       </ThemedView>
+
       <ThemedView style={styles.card}>
-        <ThemedText type="defaultSemiBold">🍔 Zinger Burger - Rs. 350</ThemedText>
+        <ThemedText>🍔 Zinger Burger - Rs. 350</ThemedText>
       </ThemedView>
 
       <Link href="/menu" asChild>
@@ -27,10 +29,10 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  container:{flex:1, alignItems:'center', justifyContent:'center', padding:20, gap:10},
-  logo:{width:100, height:100, borderRadius:20},
-  sub:{opacity:0.7},
-  card:{width:'100%', padding:15, borderRadius:12, backgroundColor:'#eee'},
-  btn:{backgroundColor:'#ff6347', paddingVertical:12, paddingHorizontal:30, borderRadius:10, marginTop:20},
-  btnText:{color:'#fff', fontWeight:'bold'}
-})
+  container: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 20, gap: 12 },
+  logo: { width: 100, height: 100, borderRadius: 20 },
+  sub: { opacity: 0.7 },
+  card: { padding: 16, borderRadius: 12, width: '100%', backgroundColor: '#f5f5f5', marginTop: 8 },
+  btn: { backgroundColor: '#000', padding: 14, borderRadius: 10, marginTop: 20, width: '100%', alignItems: 'center' },
+  btnText: { color: '#fff', fontWeight: 'bold' },
+});
