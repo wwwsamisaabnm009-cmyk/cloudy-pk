@@ -1,38 +1,28 @@
-
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <ThemedView style={styles.container}>
+    <ScrollView style={styles.container}>
+      <Text style={styles.title}>Welcome to My Restaurant</Text>
+      <Text style={styles.subtitle}>Delicious Food - Fresh & Tasty</Text>
       
-      <ThemedText type="title">My Restaurant 🍽️</ThemedText>
-      <ThemedText type="subtitle" style={styles.sub}>Best Food in Lahore</ThemedText>
-
-      <ThemedView style={styles.card}>
-        <ThemedText>🍛 Chicken Biryani - Rs. 450</ThemedText>
-      </ThemedView>
-
-      <ThemedView style={styles.card}>
-        <ThemedText>🍔 Zinger Burger - Rs. 350</ThemedText>
-      </ThemedView>
-
-      <Link href="/menu" asChild>
-        <TouchableOpacity style={styles.btn}>
-          <ThemedText style={styles.btnText}>View Full Menu</ThemedText>
-        </TouchableOpacity>
-      </Link>
-    </ThemedView>
+      <View style={styles.card}>
+        <Text style={styles.food}>🍔 Burger - Rs. 500</Text>
+      </View>
+      <View style={styles.card}>
+        <Text style={styles.food}>🍕 Pizza - Rs. 1200</Text>
+      </View>
+      <View style={styles.card}>
+        <Text style={styles.food}>🍝 Pasta - Rs. 800</Text>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 20, gap: 12 },
-  logo: { width: 100, height: 100, borderRadius: 20 },
-  sub: { opacity: 0.7 },
-  card: { padding: 16, borderRadius: 12, width: '100%', backgroundColor: '#f5f5f5', marginTop: 8 },
-  btn: { backgroundColor: '#000', padding: 14, borderRadius: 10, marginTop: 20, width: '100%', alignItems: 'center' },
-  btnText: { color: '#fff', fontWeight: 'bold' },
+  container: { flex: 1, padding: 20, backgroundColor: '#fff' },
+  title: { fontSize: 26, fontWeight: 'bold', marginTop: 40 },
+  subtitle: { fontSize: 16, color: 'gray', marginBottom: 20 },
+  card: { padding: 15, backgroundColor: '#f5f5f5', borderRadius: 10, marginBottom: 10 },
+  food: { fontSize: 18 }
 });

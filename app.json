@@ -5,16 +5,20 @@
     "slug": "restaurant",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/export logo.png",
     "scheme": "restaurant",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/export logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
+        "foregroundImage": "./assets/export logo.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.malikanaseer.restaurant"
@@ -22,13 +26,28 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/icon.png"
+      "favicon": "./assets/export logo.png"
     },
-    "plugins": ["expo-router"],
-    "experiments": { "typedRoutes": true },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/export logo.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
     "extra": {
       "router": {},
-      "eas": { "projectId": "79435f72-c1d6-410e-be8a-7f0133e17338" }
+      "eas": {
+        "projectId": "79435f72-c1d6-410e-be8a-7f0133e17338"
+      }
     }
   }
 }
