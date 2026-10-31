@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sign In - Cloudy.pk</title>
+
+  <link rel="icon" type="image/png" href="../../assets/cloud.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta name="description" content="Sign in to Cloudy.pk.">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+      <a href="../../index.html" class="font-bold text-2xl text-blue-600">
+        <i class="fa-solid fa-cloud"></i> Cloudy.pk
+      </a>
+
+      <button id="menuButton"
+        class="md:hidden text-2xl text-blue-600"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="../../index.html" class="hover:text-blue-600">Home</a>
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+        <a href="signin.html" class="text-blue-600 font-bold">Sign In</a>
+        <a href="signup.html"
+          class="bg-slate-900 text-white px-5 py-2 rounded-full hover:bg-slate-700">
+          Sign Up
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden border-t bg-white p-4 space-y-3">
+      <a href="../../index.html" class="block hover:text-blue-600">Home</a>
+      <a href="about.html" class="block hover:text-blue-600">About</a>
+      <a href="contact.html" class="block hover:text-blue-600">Contact</a>
+      <a href="signin.html" class="block text-blue-600 font-bold">Sign In</a>
+      <a href="signup.html" class="block hover:text-blue-600">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <main class="min-h-[85vh] bg-gradient-to-br from-blue-600 to-cyan-400 px-4 py-12 flex items-center justify-center">
+
+    <div class="max-w-md w-full">
+
+      <!-- Welcome Badge -->
+      <div class="text-center mb-6">
+        <span class="inline-flex items-center gap-2 bg-white/20 text-white px-5 py-2 rounded-full text-sm">
+          <i class="fa-solid fa-cloud-sun"></i>
+          Welcome Back
+        </span>
+      </div>
+
+      <!-- Login Card -->
+      <section class="bg-white p-6 sm:p-8 rounded-3xl shadow-2xl">
+
+        <div class="text-center">
+          <div class="mx-auto w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-3xl">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+
+          <h1 class="text-3xl font-extrabold mt-5">
+            Sign In to Cloudy.pk
+          </h1>
+
+          <p class="text-slate-500 text-sm mt-2">
+            Welcome back! Enter your details below.
+          </p>
+        </div>
+
+        <!-- Information Alert -->
+        <div class="mt-6 flex items-start gap-3 p-4 rounded-xl bg-blue-50 border border-blue-100">
+          <i class="fa-solid fa-circle-info text-blue-600 mt-1"></i>
+          <p class="text-sm text-blue-800">
+            Enter your account information to continue.
+          </p>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="signinForm" class="mt-6">
+
+          <!-- Email -->
+          <label for="email" class="block text-sm font-bold mb-2">
+            Email Address
+          </label>
+
+          <div class="flex items-center gap-3 border border-slate-200 rounded-xl px-4 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-100">
+            <i class="fa-solid fa-envelope text-slate-400"></i>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required
+              class="w-full py-3 outline-none bg-transparent">
+          </div>
+
+          <!-- Password -->
+          <label for="password" class="block text-sm font-bold mt-5 mb-2">
+            Password
+          </label>
+
+          <div class="flex items-center gap-3 border border-slate-200 rounded-xl px-4 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-100">
+            <i class="fa-solid fa-lock text-slate-400"></i>
+
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+              class="w-full py-3 outline-none bg-transparent">
+
+            <button
+              type="button"
+              id="togglePassword"
+              class="text-slate-500 hover:text-blue-600"
+              aria-label="Show password">
+              <i id="eyeIcon" class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+
+          <!-- Remember Me -->
+          <div class="flex items-center justify-between gap-3 mt-5">
+
+            <label class="flex items-center gap-2 text-sm text-slate-600">
+              <input
+                type="checkbox"
+                id="remember"
+                class="w-4 h-4 accent-blue-600">
+              Remember me
+            </label>
+
+            <a href="#"
+              id="forgotPassword"
+              class="text-sm font-semibold text-blue-600 hover:underline">
+              Forgot Password?
+            </a>
+
+          </div>
+
+          <!-- Sign In Button -->
+          <button
+            type="submit"
+            class="w-full mt-6 bg-slate-900 text-white py-3.5 rounded-full font-bold shadow-lg hover:bg-blue-700 transition duration-300">
+
+            <i class="fa-solid fa-right-to-bracket mr-2"></i>
+            Sign In
+          </button>
+
+          <!-- Form Message -->
+          <p id="formMessage"
+            class="text-sm text-center mt-4"
+            aria-live="polite"></p>
+
+          <!-- Divider -->
+          <div class="flex items-center gap-4 my-6">
+            <div class="flex-1 h-px bg-slate-200"></div>
+            <span class="text-xs text-slate-400">OR</span>
+            <div class="flex-1 h-px bg-slate-200"></div>
+          </div>
+
+          <!-- Google Button -->
+          <button
+            type="button"
+            id="googleButton"
+            class="w-full border border-slate-200 py-3 rounded-full font-semibold hover:bg-slate-50 transition">
+
+            <i class="fa-brands fa-google text-red-500 mr-2"></i>
+            Continue with Google
+          </button>
+
+          <!-- Sign Up Link -->
+          <p class="text-center text-sm text-slate-600 mt-6">
+            Don't have an account?
+            <a href="signup.html" class="text-blue-600 font-bold hover:underline">
+              Create Account
+            </a>
+          </p>
+
+        </form>
+      </section>
+
+      <!-- Additional Information Card -->
+      <div class="bg-white/15 border border-white/20 rounded-2xl p-4 mt-6 text-center text-white">
+        <i class="fa-solid fa-cloud-sun text-xl"></i>
+        <p class="font-semibold mt-2">Explore Weather Across Pakistan</p>
+        <p class="text-sm text-blue-50 mt-1">
+          Visit our Home page to explore the weather cards.
+        </p>
+        <a href="../../index.html"
+          class="inline-block mt-3 bg-white text-blue-700 px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-50">
+          Go to Home
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-white">
+
+    <div class="max-w-6xl mx-auto px-6 py-8 grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <div>
+        <h2 class="font-bold text-xl text-blue-400">
+          <i class="fa-solid fa-cloud"></i> Cloudy.pk
+        </h2>
+        <p class="text-slate-400 text-sm mt-3">
+          A weather website project for cities across Pakistan.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="font-bold">Quick Links</h3>
+        <div class="flex flex-col gap-2 text-slate-400 text-sm mt-3">
+          <a href="../../index.html" class="hover:text-white">Home</a>
+          <a href="about.html" class="hover:text-white">About</a>
+          <a href="contact.html" class="hover:text-white">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-bold">Account</h3>
+        <div class="flex flex-col gap-2 text-slate-400 text-sm mt-3">
+          <a href="signin.html" class="hover:text-white">Sign In</a>
+          <a href="signup.html" class="hover:text-white">Sign Up</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-slate-700 text-center text-slate-400 text-sm py-5">
+      &copy; 2026 Cloudy.pk. All rights reserved.
+    </div>
+
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", function () {
+      const isHidden = mobileMenu.classList.toggle("hidden");
+      menuButton.setAttribute("aria-expanded", String(!isHidden));
+    });
+
+    // Show and hide password
+    const passwordInput = document.getElementById("password");
+    const togglePassword = document.getElementById("togglePassword");
+    const eyeIcon = document.getElementById("eyeIcon");
+
+    togglePassword.addEventListener("click", function () {
+      const showingPassword = passwordInput.type === "password";
+
+      passwordInput.type = showingPassword ? "text" : "password";
+      eyeIcon.className = showingPassword
+        ? "fa-solid fa-eye-slash"
+        : "fa-solid fa-eye";
+
+      togglePassword.setAttribute(
+        "aria-label",
+        showingPassword ? "Hide password" : "Show password"
+      );
+    });
+
+    // Demo sign-in form
+    document.getElementById("signinForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      document.getElementById("formMessage").textContent =
+        "The form is working, but account authentication has not been connected yet.";
+
+      document.getElementById("formMessage").className =
+        "text-sm text-center mt-4 text-amber-600";
+    });
+
+    // Demo buttons
+    document.getElementById("forgotPassword").addEventListener("click", function (event) {
+      event.preventDefault();
+
+      document.getElementById("formMessage").textContent =
+        "Password recovery has not been configured yet.";
+
+      document.getElementById("formMessage").className =
+        "text-sm text-center mt-4 text-blue-600";
+    });
+
+    document.getElementById("googleButton").addEventListener("click", function () {
+      document.getElementById("formMessage").textContent =
+        "Google sign-in has not been connected yet.";
+
+      document.getElementById("formMessage").className =
+        "text-sm text-center mt-4 text-blue-600";
+    });
+  </script>
+
+</body>
+</html>

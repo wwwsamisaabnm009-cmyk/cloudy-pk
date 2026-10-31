@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Home - Cloudy.pk Weather Forecast</title>
+
+  <link rel="icon" type="image/png" href="assets/cloud.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta name="description" content="Cloudy.pk provides weather information and forecasts for cities across Pakistan.">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- Navigation Bar -->
+
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+```
+  <a href="index.html" class="font-bold text-2xl text-blue-600">
+    <i class="fa-solid fa-cloud"></i> Cloudy.pk
+  </a>
+
+  <button id="menuButton" class="md:hidden text-2xl text-blue-600"
+    aria-label="Open navigation menu" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <div class="hidden md:flex space-x-6 items-center">
+    <a href="index.html" class="text-blue-600 font-bold">Home</a>
+    <a href="src/pages/about.html" class="hover:text-blue-600">About</a>
+    <a href="src/pages/contact.html" class="hover:text-blue-600">Contact</a>
+
+    <a href="src/pages/manage-records.html" class="hover:text-blue-600">
+      Manage Records
+    </a>
+
+    <a href="src/pages/live-weather.html" class="hover:text-blue-600">
+      Live Weather
+    </a>
+
+    <a href="src/pages/signin.html"
+      class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700">
+      Sign In
+    </a>
+
+    <a href="src/pages/signup.html"
+      class="bg-slate-900 text-white px-5 py-2 rounded-full hover:bg-slate-700">
+      Sign Up
+    </a>
+  </div>
+</div>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-white border-t p-4 space-y-3">
+
+  <a href="index.html" class="block text-blue-600 font-bold">Home</a>
+  <a href="src/pages/about.html" class="block hover:text-blue-600">About</a>
+  <a href="src/pages/contact.html" class="block hover:text-blue-600">Contact</a>
+
+  <a href="src/pages/manage-records.html" class="block hover:text-blue-600">
+    Manage Records
+  </a>
+
+  <a href="src/pages/live-weather.html" class="block hover:text-blue-600">
+    Live Weather
+  </a>
+
+  <a href="src/pages/signin.html" class="block hover:text-blue-600">
+    Sign In
+  </a>
+
+  <a href="src/pages/signup.html" class="block hover:text-blue-600">
+    Sign Up
+  </a>
+
+</div>
+```
+
+  </nav>
+
+  <!-- Weather Notice -->
+
+  <div class="bg-yellow-100 text-yellow-800 px-4 py-3 text-center text-sm">
+    <i class="fa-solid fa-triangle-exclamation mr-2"></i>
+    Welcome to Cloudy.pk! Check weather information for Pakistani cities.
+  </div>
+
+  <!-- Hero Section -->
+
+  <section class="text-center px-6 py-16 md:py-24 bg-gradient-to-br from-blue-600 to-cyan-400 text-white">
+
+```
+<span class="inline-block bg-white/20 px-4 py-2 rounded-full text-sm">
+  <i class="fa-solid fa-cloud-sun mr-1"></i>
+  Pakistan Weather Forecast
+</span>
+
+<h1 class="text-4xl md:text-6xl font-extrabold mt-6 leading-tight">
+  Pakistan Ka Mausam,<br class="hidden md:block">
+  Ab Aapki Jeb Mein
+</h1>
+
+<p class="max-w-2xl mx-auto mt-5 text-blue-50 text-lg">
+  Explore weather information for cities across Pakistan
+  with Cloudy.pk.
+</p>
+
+<!-- Search Form -->
+<form id="weatherSearch"
+  class="max-w-xl mx-auto mt-8 flex bg-white rounded-full p-2 shadow-lg">
+
+  <label for="citySearch" class="sr-only">Enter city name</label>
+
+  <input
+    id="citySearch"
+    type="text"
+    placeholder="Enter a city, e.g. Lahore"
+    class="w-full min-w-0 px-4 md:px-6 text-slate-800 outline-none rounded-full"
+    required>
+
+  <button type="submit"
+    class="bg-blue-600 text-white px-5 md:px-8 py-3 rounded-full font-bold hover:bg-blue-700">
+    Search
+  </button>
+</form>
+
+<p id="searchMessage" class="mt-4 text-sm text-white" aria-live="polite"></p>
+```
+
+  </section>
+
+  <!-- Weather Cards -->
+
+  <section id="weather" class="max-w-6xl mx-auto px-6 py-12">
+
+```
+<div class="text-center mb-8">
+  <h2 class="text-3xl font-bold">Weather Across Pakistan</h2>
+  <p class="text-slate-500 mt-2">
+    Explore sample weather cards for three major cities.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+  <!-- Lahore Card -->
+  <article class="bg-gradient-to-br from-[#FFF8E1] to-[#FFECB3]
+    border border-amber-200 p-6 rounded-2xl shadow-lg
+    hover:-translate-y-1 transition duration-300">
+
+    <div class="flex justify-between items-center">
+      <h3 class="text-xl font-bold">Lahore</h3>
+      <span class="bg-white text-amber-700 text-xs px-3 py-1 rounded-full font-bold">
+        Sunny
+      </span>
+    </div>
+
+    <img src="assets/sun.png" alt="Sunny weather"
+      class="w-24 h-24 mx-auto mt-5 object-contain">
+
+    <p class="text-5xl font-bold text-center mt-3">32°C</p>
+    <p class="text-center text-amber-800 mt-2">Sunny conditions</p>
+
+    <div class="grid grid-cols-2 gap-3 mt-6">
+      <div class="bg-white/70 p-3 rounded-xl text-center">
+        <i class="fa-solid fa-wind text-amber-700"></i>
+        <p class="text-xs mt-1">Wind</p>
+        <p class="font-bold text-sm">Not available</p>
+      </div>
+
+      <div class="bg-white/70 p-3 rounded-xl text-center">
+        <i class="fa-solid fa-droplet text-blue-600"></i>
+        <p class="text-xs mt-1">Humidity</p>
+        <p class="font-bold text-sm">Not available</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Karachi Card -->
+  <article class="bg-gradient-to-br from-[#E3F2FD] to-[#BBDEFB]
+    border border-blue-200 p-6 rounded-2xl shadow-lg
+    hover:-translate-y-1 transition duration-300">
+
+    <div class="flex justify-between items-center">
+      <h3 class="text-xl font-bold">Karachi</h3>
+      <span class="bg-white text-blue-700 text-xs px-3 py-1 rounded-full font-bold">
+        Cloudy
+      </span>
+    </div>
+
+    <img src="assets/cloud.png" alt="Cloudy weather"
+      class="w-24 h-24 mx-auto mt-5 object-contain">
+
+    <p class="text-5xl font-bold text-center mt-3">29°C</p>
+    <p class="text-center text-blue-800 mt-2">Cloudy conditions</p>
+
+    <div class="grid grid-cols-2 gap-3 mt-6">
+      <div class="bg-white/70 p-3 rounded-xl text-center">
+        <i class="fa-solid fa-wind text-blue-700"></i>
+        <p class="text-xs mt-1">Wind</p>
+        <p class="font-bold text-sm">Not available</p>
+      </div>
+
+      <div class="bg-white/70 p-3 rounded-xl text-center">
+        <i class="fa-solid fa-droplet text-blue-600"></i>
+        <p class="text-xs mt-1">Humidity</p>
+        <p class="font-bold text-sm">Not available</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Islamabad Card -->
+  <article class="bg-gradient-to-br from-[#E0F2F1] to-[#B2DFDB]
+    border border-teal-200 p-6 rounded-2xl shadow-lg
+    hover:-translate-y-1 transition duration-300">
+
+    <div class="flex justify-between items-center">
+      <h3 class="text-xl font-bold">Islamabad</h3>
+      <span class="bg-white text-teal-700 text-xs px-3 py-1 rounded-full font-bold">
+        Rainy
+      </span>
+    </div>
+
+    <img src="assets/rain.png" alt="Rainy weather"
+      class="w-24 h-24 mx-auto mt-5 object-contain">
+
+    <p class="text-5xl font-bold text-center mt-3">24°C</p>
+    <p class="text-center text-teal-800 mt-2">Rainy conditions</p>
+
+    <div class="grid grid-cols-2 gap-3 mt-6">
+      <div class="bg-white/70 p-3 rounded-xl text-center">
+        <i class="fa-solid fa-wind text-teal-700"></i>
+        <p class="text-xs mt-1">Wind</p>
+        <p class="font-bold text-sm">Not available</p>
+      </div>
+
+      <div class="bg-white/70 p-3 rounded-xl text-center">
+        <i class="fa-solid fa-droplet text-blue-600"></i>
+        <p class="text-xs mt-1">Humidity</p>
+        <p class="font-bold text-sm">Not available</p>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+<p class="text-xs text-center text-slate-500 mt-5">
+  Note: The temperatures and conditions above are sample values, not verified live weather data.
+</p>
+```
+
+  </section>
+
+  <!-- Features Section -->
+
+  <section class="bg-white py-14 px-6">
+
+```
+<div class="max-w-6xl mx-auto">
+
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold">Why Use Cloudy.pk?</h2>
+    <p class="text-slate-500 mt-2">
+      A simple way to explore weather information.
+    </p>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="p-6 border rounded-2xl shadow-sm hover:shadow-lg transition">
+      <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl">
+        <i class="fa-solid fa-city"></i>
+      </div>
+      <h3 class="font-bold text-lg mt-4">City Information</h3>
+      <p class="text-slate-500 text-sm mt-2">
+        Explore weather cards for different cities in Pakistan.
+      </p>
+    </div>
+
+    <div class="p-6 border rounded-2xl shadow-sm hover:shadow-lg transition">
+      <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center text-xl">
+        <i class="fa-solid fa-mobile-screen"></i>
+      </div>
+      <h3 class="font-bold text-lg mt-4">Responsive Design</h3>
+      <p class="text-slate-500 text-sm mt-2">
+        View the website on mobile phones, tablets, and computers.
+      </p>
+    </div>
+
+    <div class="p-6 border rounded-2xl shadow-sm hover:shadow-lg transition">
+      <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl">
+        <i class="fa-solid fa-cloud-sun"></i>
+      </div>
+      <h3 class="font-bold text-lg mt-4">Weather Overview</h3>
+      <p class="text-slate-500 text-sm mt-2">
+        See sample weather conditions in a clear card layout.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- Call to Action -->
+
+  <section class="px-6 py-14">
+    <div class="max-w-5xl mx-auto bg-gradient-to-r from-blue-600 to-cyan-400
+      rounded-3xl p-8 md:p-12 text-center text-white shadow-xl">
+
+```
+  <h2 class="text-3xl font-bold">Discover Cloudy.pk</h2>
+
+  <p class="mt-3 text-blue-50">
+    Learn more about the website or send us a message through the Contact page.
+  </p>
+
+  <div class="flex flex-wrap justify-center gap-4 mt-6">
+    <a href="src/pages/about.html"
+      class="bg-white text-blue-700 px-6 py-3 rounded-full font-bold hover:bg-blue-50">
+      About Us
+    </a>
+
+    <a href="src/pages/contact.html"
+      class="border border-white px-6 py-3 rounded-full font-bold hover:bg-white/10">
+      Contact Us
+    </a>
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="bg-slate-900 text-white">
+
+```
+<div class="max-w-6xl mx-auto px-6 py-10 grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+  <div>
+    <h2 class="font-bold text-2xl text-white">
+      <i class="fa-solid fa-cloud text-cyan-400"></i> Cloudy.pk
+    </h2>
+    <p class="text-slate-400 text-sm mt-3">
+      A weather website project focused on cities across Pakistan.
+    </p>
+  </div>
+
+  <div>
+    <h3 class="font-bold text-lg">Quick Links</h3>
+    <div class="flex flex-col gap-2 mt-3 text-slate-400 text-sm">
+      <a href="index.html" class="hover:text-white">Home</a>
+      <a href="src/pages/about.html" class="hover:text-white">About</a>
+      <a href="src/pages/contact.html" class="hover:text-white">Contact</a>
+      <a href="src/pages/signin.html" class="hover:text-white">Sign In</a>
+      <a href="src/pages/signup.html" class="hover:text-white">Sign Up</a>
+      <a href="src/pages/manage-records.html" class="hover:text-white">Manage Records</a>
+      <a href="src/pages/live-weather.html" class="hover:text-white">Live Weather</a>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="font-bold text-lg">Explore</h3>
+    <p class="text-slate-400 text-sm mt-3">
+      Browse the weather cards and learn about the features of Cloudy.pk.
+    </p>
+    <a href="#weather"
+      class="inline-block mt-4 bg-blue-600 px-5 py-2 rounded-full hover:bg-blue-700">
+      View Weather
+    </a>
+  </div>
+
+</div>
+
+<div class="border-t border-slate-700 text-center text-slate-400 text-sm p-5">
+  &copy; 2026 Cloudy.pk. All rights reserved.
+</div>
+```
+
+  </footer>
+
+  <!-- JavaScript -->
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", function () {
+      const isHidden = mobileMenu.classList.toggle("hidden");
+      menuButton.setAttribute("aria-expanded", String(!isHidden));
+    });
+
+    document.getElementById("weatherSearch").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const city = document.getElementById("citySearch").value.trim();
+      const message = document.getElementById("searchMessage");
+
+      if (!city) {
+        message.textContent = "Please enter a city name.";
+        return;
+      }
+
+      const knownCities = ["lahore", "karachi", "islamabad"];
+
+      if (knownCities.includes(city.toLowerCase())) {
+        document.getElementById("weather").scrollIntoView({
+          behavior: "smooth"
+        });
+
+        message.textContent =
+          "Showing the sample weather cards below. These values are not live forecasts.";
+      } else {
+        message.textContent =
+          "This demo currently includes Lahore, Karachi, and Islamabad. Live city searches are not connected yet.";
+      }
+    });
+  </script>
+
+</body>
+</html>
