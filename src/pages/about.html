@@ -1,54 +1,35 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>About Us - Cloudy.pk</title>
-
+  <title>About Us - Cloudy.pk | Weather Info for Pakistan</title>
   <link rel="icon" type="image/png" href="../../assets/cloud.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <meta name="description" content="Learn about Cloudy.pk, a weather website project focused on cities across Pakistan.">
+  <meta name="description" content="Cloudy.pk is a simple weather information website for cities across Pakistan, built with HTML5 and Tailwind CSS.">
+  <meta name="keywords" content="Cloudy.pk, Pakistan weather, city weather, HTML Tailwind project">
 </head>
-
 <body class="bg-slate-50 text-slate-800">
 
-  <!-- Navbar -->
+  
   <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-
       <a href="../../index.html" class="font-bold text-2xl text-blue-600">
         <i class="fa-solid fa-cloud"></i> Cloudy.pk
       </a>
-
-      <button id="menuButton"
-        class="md:hidden text-2xl text-blue-600"
-        aria-label="Open navigation menu"
-        aria-expanded="false">
+      <button id="menuButton" class="md:hidden text-2xl text-blue-600" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
         <i class="fa-solid fa-bars"></i>
       </button>
-
       <div class="hidden md:flex items-center gap-6">
         <a href="../../index.html" class="hover:text-blue-600">Home</a>
-
         <a href="about.html" class="text-blue-600 font-bold">About</a>
-
         <a href="contact.html" class="hover:text-blue-600">Contact</a>
-
-        <a href="signin.html"
-          class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
-          Sign In
-        </a>
-
-        <a href="signup.html"
-          class="bg-slate-900 text-white px-5 py-2 rounded-full hover:bg-slate-700 transition">
-          Sign Up
-        </a>
+        <a href="signin.html" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">Sign In</a>
+        <a href="signup.html" class="bg-slate-900 text-white px-5 py-2 rounded-full hover:bg-slate-700 transition">Sign Up</a>
       </div>
     </div>
-
     <!-- Mobile Navigation -->
     <div id="mobileMenu" class="hidden md:hidden border-t bg-white p-4 space-y-3">
       <a href="../../index.html" class="block hover:text-blue-600">Home</a>
@@ -61,442 +42,207 @@
 
   <!-- Hero Section -->
   <header class="bg-gradient-to-br from-blue-600 to-cyan-400 text-white text-center px-6 py-20">
-
     <span class="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-semibold">
-      <i class="fa-solid fa-cloud-sun mr-2"></i>
-      About Cloudy.pk
+      <i class="fa-solid fa-cloud-sun mr-2"></i> About Cloudy.pk
     </span>
-
-    <h1 class="text-4xl md:text-6xl font-extrabold mt-6">
-      Discover Cloudy.pk
-    </h1>
-
+    <h1 class="text-4xl md:text-6xl font-extrabold mt-6">Discover Cloudy.pk</h1>
     <p class="max-w-2xl mx-auto mt-5 text-blue-50 text-lg leading-8">
-      Your weather information companion for exploring weather conditions
-      in cities across Pakistan.
+      Your weather information companion for exploring weather conditions in cities across Pakistan.
     </p>
-
-    <a href="../../index.html"
-      class="inline-block mt-8 bg-white text-blue-700 px-7 py-3 rounded-full font-bold shadow-lg hover:bg-blue-50 transition">
-      <i class="fa-solid fa-house mr-2"></i>
-      Explore Home
+    <a href="../../index.html" class="inline-block mt-8 bg-white text-blue-700 px-7 py-3 rounded-full font-bold shadow-lg hover:bg-blue-50 transition">
+      <i class="fa-solid fa-house mr-2"></i> Explore Home
     </a>
-
   </header>
 
   <!-- Introduction Section -->
   <main class="max-w-6xl mx-auto px-4 sm:px-6 py-14">
-
     <section class="grid md:grid-cols-2 gap-10 items-center">
-
       <div>
-        <span class="text-blue-600 font-bold text-sm uppercase tracking-wider">
-          Who We Are
-        </span>
-
-        <h2 class="text-3xl md:text-4xl font-extrabold mt-3">
-          Welcome to Cloudy.pk
-        </h2>
-
-        <p class="text-slate-600 leading-7 mt-5">
-          Cloudy.pk is a weather website project designed to present
-          weather information for different cities across Pakistan.
-        </p>
-
-        <p class="text-slate-600 leading-7 mt-4">
-          Our website provides a simple interface where visitors can
-          explore weather-related information and navigate between
-          different sections easily.
-        </p>
-
-        <p class="text-slate-600 leading-7 mt-4">
-          The project uses HTML5 and Tailwind CSS to create a responsive
-          and user-friendly website.
-        </p>
-
+        <span class="text-blue-600 font-bold text-sm uppercase tracking-wider">Who We Are</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold mt-3">Welcome to Cloudy.pk</h2>
+        <p class="text-slate-600 leading-7 mt-5">Cloudy.pk is a weather website project designed to present weather information for different cities across Pakistan.</p>
+        <p class="text-slate-600 leading-7 mt-4">Our website provides a simple interface where visitors can explore weather-related information and navigate between different sections easily.</p>
+        <p class="text-slate-600 leading-7 mt-4">The project uses HTML5 and Tailwind CSS to create a responsive and user-friendly website.</p>
       </div>
-
       <!-- About Visual Card -->
       <div class="bg-gradient-to-br from-blue-100 to-cyan-100 p-8 rounded-3xl">
-
         <div class="bg-white rounded-2xl shadow-lg p-6">
-
           <div class="flex items-center justify-between">
             <div>
               <p class="text-slate-500 text-sm">Weather Information</p>
               <h3 class="text-2xl font-bold mt-2">Cloudy.pk</h3>
             </div>
-
             <i class="fa-solid fa-cloud-sun text-5xl text-blue-500"></i>
           </div>
-
           <div class="grid grid-cols-2 gap-4 mt-8">
-
             <div class="bg-blue-50 p-4 rounded-xl">
               <i class="fa-solid fa-city text-blue-600 text-xl"></i>
               <p class="font-bold mt-3">City Weather</p>
-              <p class="text-xs text-slate-500 mt-1">
-                Explore city information
-              </p>
+              <p class="text-xs text-slate-500 mt-1">Explore city information</p>
             </div>
-
             <div class="bg-cyan-50 p-4 rounded-xl">
               <i class="fa-solid fa-mobile-screen text-cyan-600 text-xl"></i>
               <p class="font-bold mt-3">Responsive</p>
-              <p class="text-xs text-slate-500 mt-1">
-                Mobile-friendly design
-              </p>
+              <p class="text-xs text-slate-500 mt-1">Mobile-friendly design</p>
             </div>
-
             <div class="bg-amber-50 p-4 rounded-xl">
               <i class="fa-solid fa-sun text-amber-500 text-xl"></i>
               <p class="font-bold mt-3">Weather Icons</p>
-              <p class="text-xs text-slate-500 mt-1">
-                Visual weather indicators
-              </p>
+              <p class="text-xs text-slate-500 mt-1">Visual weather indicators</p>
             </div>
-
             <div class="bg-green-50 p-4 rounded-xl">
               <i class="fa-solid fa-compass text-green-600 text-xl"></i>
               <p class="font-bold mt-3">Easy Navigation</p>
-              <p class="text-xs text-slate-500 mt-1">
-                Simple page navigation
-              </p>
+              <p class="text-xs text-slate-500 mt-1">Simple page navigation</p>
             </div>
-
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- Mission and Vision -->
     <section class="grid md:grid-cols-2 gap-6 mt-16">
-
       <article class="bg-white border border-slate-100 rounded-2xl p-7 shadow-sm hover:shadow-lg transition">
-
-        <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl">
-          <i class="fa-solid fa-bullseye"></i>
-        </div>
-
+        <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl"><i class="fa-solid fa-bullseye"></i></div>
         <h2 class="text-2xl font-bold mt-5">Our Mission</h2>
-
-        <p class="text-slate-600 leading-7 mt-3">
-          To create an easy-to-use website that presents weather-related
-          information in a clear and accessible way.
-        </p>
-
+        <p class="text-slate-600 leading-7 mt-3">To create an easy-to-use website that presents weather-related information in a clear and accessible way.</p>
       </article>
-
       <article class="bg-white border border-slate-100 rounded-2xl p-7 shadow-sm hover:shadow-lg transition">
-
-        <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center text-2xl">
-          <i class="fa-solid fa-eye"></i>
-        </div>
-
+        <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center text-2xl"><i class="fa-solid fa-eye"></i></div>
         <h2 class="text-2xl font-bold mt-5">Our Vision</h2>
-
-        <p class="text-slate-600 leading-7 mt-3">
-          To develop a useful weather platform with a clean design,
-          convenient navigation, and helpful weather features.
-        </p>
-
+        <p class="text-slate-600 leading-7 mt-3">To develop a useful weather platform with a clean design, convenient navigation, and helpful weather features.</p>
       </article>
-
     </section>
 
     <!-- Features -->
     <section class="mt-16">
-
       <div class="text-center max-w-2xl mx-auto">
-        <span class="text-blue-600 text-sm font-bold uppercase tracking-wider">
-          What We Offer
-        </span>
-
-        <h2 class="text-3xl md:text-4xl font-extrabold mt-3">
-          Website Features
-        </h2>
-
-        <p class="text-slate-500 mt-4 leading-7">
-          Explore the main features and design elements of Cloudy.pk.
-        </p>
+        <span class="text-blue-600 text-sm font-bold uppercase tracking-wider">What We Offer</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold mt-3">Website Features</h2>
+        <p class="text-slate-500 mt-4 leading-7">Explore the main features and design elements of Cloudy.pk.</p>
       </div>
-
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-
         <article class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 hover:shadow-lg transition">
-
-          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl">
-            <i class="fa-solid fa-cloud-sun"></i>
-          </div>
-
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-cloud-sun"></i></div>
           <h3 class="font-bold text-lg mt-4">Weather Information</h3>
-
-          <p class="text-slate-500 text-sm leading-6 mt-2">
-            View weather-related information displayed through visual cards.
-          </p>
-
+          <p class="text-slate-500 text-sm leading-6 mt-2">View weather-related information displayed through visual cards.</p>
         </article>
-
         <article class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 hover:shadow-lg transition">
-
-          <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center text-xl">
-            <i class="fa-solid fa-city"></i>
-          </div>
-
+          <div class="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-city"></i></div>
           <h3 class="font-bold text-lg mt-4">City-Based Layout</h3>
-
-          <p class="text-slate-500 text-sm leading-6 mt-2">
-            Weather cards help organize information for different cities.
-          </p>
-
+          <p class="text-slate-500 text-sm leading-6 mt-2">Weather cards help organize information for different cities.</p>
         </article>
-
         <article class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 hover:shadow-lg transition">
-
-          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-
+          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-magnifying-glass"></i></div>
           <h3 class="font-bold text-lg mt-4">Search Interface</h3>
-
-          <p class="text-slate-500 text-sm leading-6 mt-2">
-            A search field provides an interface for entering a city name.
-          </p>
-
+          <p class="text-slate-500 text-sm leading-6 mt-2">A search field provides an interface for entering a city name.</p>
         </article>
-
         <article class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 hover:shadow-lg transition">
-
-          <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-xl">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-          </div>
-
+          <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-mobile-screen-button"></i></div>
           <h3 class="font-bold text-lg mt-4">Responsive Design</h3>
-
-          <p class="text-slate-500 text-sm leading-6 mt-2">
-            Responsive Tailwind classes help the layout adapt to different screens.
-          </p>
-
+          <p class="text-slate-500 text-sm leading-6 mt-2">Responsive Tailwind classes help the layout adapt to different screens.</p>
         </article>
-
         <article class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 hover:shadow-lg transition">
-
-          <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl">
-            <i class="fa-solid fa-palette"></i>
-          </div>
-
+          <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-palette"></i></div>
           <h3 class="font-bold text-lg mt-4">Modern Design</h3>
-
-          <p class="text-slate-500 text-sm leading-6 mt-2">
-            Gradients, rounded cards, and shadows create a consistent interface.
-          </p>
-
+          <p class="text-slate-500 text-sm leading-6 mt-2">Gradients, rounded cards, and shadows create a consistent interface.</p>
         </article>
-
         <article class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-1 hover:shadow-lg transition">
-
-          <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center text-xl">
-            <i class="fa-solid fa-link"></i>
-          </div>
-
+          <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center text-xl"><i class="fa-solid fa-link"></i></div>
           <h3 class="font-bold text-lg mt-4">Easy Navigation</h3>
-
-          <p class="text-slate-500 text-sm leading-6 mt-2">
-            Links connect the Home, About, Contact, Sign In, and Sign Up pages.
-          </p>
-
+          <p class="text-slate-500 text-sm leading-6 mt-2">Links connect the Home, About, Contact, Sign In, and Sign Up pages.</p>
         </article>
-
       </div>
-
     </section>
 
     <!-- Technology Section -->
     <section class="mt-16 bg-white rounded-3xl border border-slate-100 shadow-sm p-8 md:p-10">
-
       <div class="text-center">
-        <span class="text-blue-600 font-bold text-sm uppercase tracking-wider">
-          Built With
-        </span>
-
-        <h2 class="text-3xl font-extrabold mt-3">
-          Technologies Used
-        </h2>
-
-        <p class="text-slate-500 mt-4">
-          The main technologies used to develop the Cloudy.pk interface.
-        </p>
+        <span class="text-blue-600 font-bold text-sm uppercase tracking-wider">Built With</span>
+        <h2 class="text-3xl font-extrabold mt-3">Technologies Used</h2>
+        <p class="text-slate-500 mt-4">The main technologies used to develop the Cloudy.pk interface.</p>
       </div>
-
       <div class="grid sm:grid-cols-2 gap-6 mt-8">
-
         <div class="flex items-center gap-4 p-5 bg-orange-50 rounded-2xl">
-          <div class="w-14 h-14 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl">
-            <i class="fa-brands fa-html5"></i>
-          </div>
-
-          <div>
-            <h3 class="font-bold text-lg">HTML5</h3>
-            <p class="text-sm text-slate-500 mt-1">
-              Structures the website content.
-            </p>
-          </div>
+          <div class="w-14 h-14 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center text-2xl"><i class="fa-brands fa-html5"></i></div>
+          <div><h3 class="font-bold text-lg">HTML5</h3><p class="text-sm text-slate-500 mt-1">Structures the website content.</p></div>
         </div>
-
         <div class="flex items-center gap-4 p-5 bg-cyan-50 rounded-2xl">
-          <div class="w-14 h-14 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center text-2xl">
-            <i class="fa-solid fa-wind"></i>
-          </div>
-
-          <div>
-            <h3 class="font-bold text-lg">Tailwind CSS</h3>
-            <p class="text-sm text-slate-500 mt-1">
-              Styles the layout and components.
-            </p>
-          </div>
+          <div class="w-14 h-14 rounded-xl bg-cyan-100 text-cyan-600 flex items-center justify-center text-2xl"><i class="fa-solid fa-wind"></i></div>
+          <div><h3 class="font-bold text-lg">Tailwind CSS</h3><p class="text-sm text-slate-500 mt-1">Styles the layout and components.</p></div>
         </div>
-
       </div>
-
     </section>
 
     <!-- FAQ Section -->
     <section class="mt-16">
-
       <div class="text-center mb-8">
-        <span class="text-blue-600 font-bold text-sm uppercase tracking-wider">
-          Common Questions
-        </span>
-
-        <h2 class="text-3xl font-extrabold mt-3">
-          Frequently Asked Questions
-        </h2>
+        <span class="text-blue-600 font-bold text-sm uppercase tracking-wider">Common Questions</span>
+        <h2 class="text-3xl font-extrabold mt-3">Frequently Asked Questions</h2>
       </div>
-
       <div class="max-w-3xl mx-auto space-y-4">
-
-        <details class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
-          <summary class="font-bold cursor-pointer">
-            What is Cloudy.pk?
-          </summary>
-
-          <p class="text-slate-500 text-sm leading-6 mt-3">
-            Cloudy.pk is a weather website project designed to display
-            weather-related information for cities across Pakistan.
-          </p>
-        </details>
-
-        <details class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
-          <summary class="font-bold cursor-pointer">
-            Which technologies does the website use?
-          </summary>
-
-          <p class="text-slate-500 text-sm leading-6 mt-3">
-            The website interface is built using HTML5 and Tailwind CSS,
-            with Font Awesome icons.
-          </p>
-        </details>
-
-        <details class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
-          <summary class="font-bold cursor-pointer">
-            Does Cloudy.pk provide verified live weather forecasts?
-          </summary>
-
-          <p class="text-slate-500 text-sm leading-6 mt-3">
-            The current homepage contains sample weather values.
-            Verified live forecasts require integration with a weather API.
-          </p>
-        </details>
-
+        <details class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm"><summary class="font-bold cursor-pointer">What is Cloudy.pk?</summary><p class="text-slate-500 text-sm leading-6 mt-3">Cloudy.pk is a weather website project designed to display weather-related information for cities across Pakistan.</p></details>
+        <details class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm"><summary class="font-bold cursor-pointer">Which technologies does the website use?</summary><p class="text-slate-500 text-sm leading-6 mt-3">The website interface is built using HTML5 and Tailwind CSS, with Font Awesome icons.</p></details>
+        <details class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm"><summary class="font-bold cursor-pointer">Does Cloudy.pk provide verified live weather forecasts?</summary><p class="text-slate-500 text-sm leading-6 mt-3">The current homepage contains sample weather values. Verified live forecasts require integration with a weather API like OpenWeatherMap.</p></details>
       </div>
-
     </section>
 
     <!-- Call to Action -->
     <section class="mt-16 bg-gradient-to-r from-blue-600 to-cyan-400 text-white rounded-3xl p-8 md:p-12 text-center">
-
-      <h2 class="text-3xl md:text-4xl font-extrabold">
-        Explore Cloudy.pk
-      </h2>
-
-      <p class="max-w-xl mx-auto mt-4 text-blue-50 leading-7">
-        Visit the homepage to explore the website and its weather information layout.
-      </p>
-
+      <h2 class="text-3xl md:text-4xl font-extrabold">Explore Cloudy.pk</h2>
+      <p class="max-w-xl mx-auto mt-4 text-blue-50 leading-7">Visit the homepage to explore the website and its weather information layout.</p>
       <div class="flex flex-wrap justify-center gap-4 mt-7">
-
-        <a href="../../index.html"
-          class="bg-white text-blue-700 px-7 py-3 rounded-full font-bold hover:bg-blue-50 transition">
-          <i class="fa-solid fa-house mr-2"></i>
-          Visit Home
-        </a>
-
-        <a href="contact.html"
-          class="border border-white/70 text-white px-7 py-3 rounded-full font-bold hover:bg-white/10 transition">
-          <i class="fa-solid fa-message mr-2"></i>
-          Contact Us
-        </a>
-
+        <a href="../../index.html" class="bg-white text-blue-700 px-7 py-3 rounded-full font-bold hover:bg-blue-50 transition"><i class="fa-solid fa-house mr-2"></i> Visit Home</a>
+        <a href="contact.html" class="border border-white/70 text-white px-7 py-3 rounded-full font-bold hover:bg-white/10 transition"><i class="fa-solid fa-message mr-2"></i> Contact Us</a>
       </div>
-
     </section>
-
   </main>
 
   <!-- Footer -->
   <footer class="bg-slate-900 text-white mt-10">
-
     <div class="max-w-6xl mx-auto px-6 py-10 grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-
       <div>
-        <h2 class="font-bold text-2xl text-blue-400">
-          <i class="fa-solid fa-cloud"></i> Cloudy.pk
-        </h2>
-
-        <p class="text-slate-400 text-sm leading-6 mt-3">
-          A weather website project focused on cities across Pakistan.
-        </p>
+        <h2 class="font-bold text-2xl text-blue-400"><i class="fa-solid fa-cloud"></i> Cloudy.pk</h2>
+        <p class="text-slate-400 text-sm leading-6 mt-3">A weather website project focused on cities across Pakistan.</p>
       </div>
-
       <div>
         <h3 class="font-bold text-lg">Quick Links</h3>
-
         <div class="flex flex-col gap-2 mt-3 text-slate-400 text-sm">
           <a href="../../index.html" class="hover:text-white">Home</a>
           <a href="about.html" class="hover:text-white">About</a>
           <a href="contact.html" class="hover:text-white">Contact</a>
         </div>
       </div>
-
       <div>
         <h3 class="font-bold text-lg">Account</h3>
-
         <div class="flex flex-col gap-2 mt-3 text-slate-400 text-sm">
           <a href="signin.html" class="hover:text-white">Sign In</a>
           <a href="signup.html" class="hover:text-white">Sign Up</a>
         </div>
       </div>
-
     </div>
-
-    <div class="border-t border-slate-700 text-center text-slate-400 text-sm py-5">
-      &copy; 2026 Cloudy.pk. All rights reserved.
-    </div>
-
+    <div class="border-t border-slate-700 text-center text-slate-400 text-sm py-5">&copy; 2026 Cloudy.pk. All rights reserved.</div>
   </footer>
 
-  <!-- JavaScript -->
   <script>
     const menuButton = document.getElementById("menuButton");
     const mobileMenu = document.getElementById("mobileMenu");
-
     menuButton.addEventListener("click", function () {
       const isHidden = mobileMenu.classList.toggle("hidden");
-
       menuButton.setAttribute("aria-expanded", String(!isHidden));
+      // icon change
+      const icon = menuButton.querySelector("i");
+      icon.className = isHidden ? "fa-solid fa-bars" : "fa-solid fa-xmark";
+    });
+    // Close menu on outside click
+    document.addEventListener("click", function(e){
+      if(!mobileMenu.contains(e.target) && !menuButton.contains(e.target)){
+        mobileMenu.classList.add("hidden");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.querySelector("i").className = "fa-solid fa-bars";
+      }
     });
   </script>
-
 </body>
 </html>
+

@@ -184,7 +184,7 @@ function displayRecords() {
     emptyMessage.style.display =
         filteredRecords.length === 0 ? "block" : "none";
 
-    // every() validates all stored records
+
     const allRecordsValid = weatherRecords.every(function (record) {
         return record.city.trim() !== "" &&
             Number.isFinite(record.temperature);
